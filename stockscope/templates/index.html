@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Stock Dashboard</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <header>
+    <h1>Stock Dashboard</h1>
+    <p>Search any Indian (NSE) or US stock</p>
+  </header>
+
+  <main>
+    <div class="search-box">
+      <input id="search" type="text" placeholder="Type a name or symbol, e.g. Reliance, TCS.NS, AAPL" autocomplete="off">
+      <button id="go">Show</button>
+      <ul id="suggestions" class="hidden"></ul>
+    </div>
+
+    <div id="periods">
+      <button data-period="1d">1D</button>
+      <button data-period="5d">5D</button>
+      <button data-period="1mo" class="active">1M</button>
+      <button data-period="3mo">3M</button>
+      <button data-period="6mo">6M</button>
+      <button data-period="1y">1Y</button>
+      <button data-period="5y">5Y</button>
+    </div>
+
+    <p id="message"></p>
+
+    <section id="result" class="hidden">
+      <div class="title-row">
+        <h2 id="ticker"></h2>
+        <span id="updated"></span>
+      </div>
+      <div class="price-row">
+        <span id="price"></span>
+        <span id="change"></span>
+      </div>
+
+      <div class="cards">
+        <div class="card"><small>High</small><b id="high"></b></div>
+        <div class="card"><small>Low</small><b id="low"></b></div>
+        <div class="card"><small>Volume</small><b id="volume"></b></div>
+      </div>
+
+      <img id="chart-price"   alt="Price chart">
+      <img id="chart-volume"  alt="Volume chart">
+      <img id="chart-returns" alt="Returns chart">
+    </section>
+  </main>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+* { box-sizing: border-box; }
+body { margin: 0; font-family: Arial, sans-serif; background: #f4f7f9; color: #13202b; }
+header { background: #0f6e66; color: white; padding: 24px; text-align: center; }
+header h1 { margin: 0 0 4px; }
+header p { margin: 0; opacity: .85; }
+main { max-width: 900px; margin: 24px auto; padding: 0 16px; }
+
+.search-box { position: relative; display: flex; gap: 8px; }
+.search-box input { flex: 1; padding: 12px; font-size: 16px; border: 1px solid #c5cdd6; border-radius: 8px; }
+button { padding: 10px 16px; border: none; border-radius: 8px; background: #0f6e66; color: white; font-size: 15px; cursor: pointer; }
+button:hover { background: #0c5a54; }
+
+#suggestions { position: absolute; top: 48px; left: 0; right: 80px; margin: 0; padding: 0; list-style: none;
+  background: white; border: 1px solid #c5cdd6; border-radius: 8px; z-index: 10; max-height: 300px; overflow-y: auto; }
+#suggestions li { padding: 10px 12px; cursor: pointer; display: flex; justify-content: space-between; }
+#suggestions li:hover { background: #eef5f4; }
+#suggestions small { color: #5b6978; }
+
+#periods { margin: 16px 0; display: flex; gap: 6px; flex-wrap: wrap; }
+#periods button { background: white; color: #13202b; border: 1px solid #c5cdd6; padding: 8px 14px; }
+#periods button.active { background: #0f6e66; color: white; border-color: #0f6e66; }
+
+#message { color: #c93a30; min-height: 20px; }
+
+#result { background: white; padding: 20px; border-radius: 12px; box-shadow: 0 1px 4px rgba(0,0,0,.08); }
+.title-row { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; }
+.title-row h2 { margin: 0; }
+#updated { color: #5b6978; font-size: 13px; }
+.price-row { margin: 10px 0 16px; }
+#price { font-size: 32px; font-weight: bold; margin-right: 12px; }
+#change { font-size: 18px; }
+.up { color: #0b8a5a; } .down { color: #c93a30; }
+
+.cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-bottom: 16px; }
+.card { background: #f4f7f9; padding: 12px; border-radius: 8px; }
+.card small { display: block; color: #5b6978; margin-bottom: 4px; }
+#result img { width: 100%; margin-top: 12px; }
+.hidden { display: none; }
